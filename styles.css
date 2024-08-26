@@ -16,8 +16,8 @@ nav {
   justify-content: center;
   padding: 0.5rem;
   gap: 0.5rem;
-  border-bottom: solid 1px #aaa;
-  background-color: #06964e;
+  border-bottom: solid 1px #caff08;
+  background-color: #0631ec;
 }
 
 nav a {
