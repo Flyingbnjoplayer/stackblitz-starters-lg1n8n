@@ -67,6 +67,12 @@ h2 {
   
 }
 
+/*voor alle lijsten op de pagina*/
+ul{
+  list-style-type: none;
+  padding-left: 0;
+}
+
 /*table1 start*/
 #table1 th,
 #table1 td{
