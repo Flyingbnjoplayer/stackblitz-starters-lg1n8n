@@ -66,3 +66,17 @@ h2 {
   color:#000000
   text-align;left: 70px
 }
+
+#table1 th,
+#table1 td{
+  border: 6px solid #000000;
+}
+
+td{
+  text-align:left;
+}
+
+th{
+  text-align:left;
+  background-color: #caff08;
+}
