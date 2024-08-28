@@ -130,5 +130,16 @@ th{
   background-color: #caff08;
 }
 
-
 /*table2 end*/
+
+/*tabellen naast elkaar*/
+
+.tabel-container{
+  text-align: center;
+}
+
+.tabel1,.tabel2{
+  display: inline-block;
+  vertical-align: text-bottom;
+  margin: 18px;
+}
