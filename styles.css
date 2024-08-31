@@ -134,11 +134,11 @@ th{
 
 /*tabellen naast elkaar*/
 
-.tabel-container{
+.table-container{
   text-align: center;
 }
 
-.tabel1,.tabel2{
+.table1,.table2{
   display: inline-block;
   vertical-align: text-bottom;
   margin: 18px;
