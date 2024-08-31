@@ -64,18 +64,14 @@ h2 {
 
 #onchain{     /*id van <th> van <table2>*/
   border-color:#000000
-  
 }
 
-/*voor alle lijsten op de pagina*/
 ul{
   list-style-type: none;
-  padding-left: 0;
 }
 
 .nodot{
   list-style-type: none;
-  padding-left: 0;
 }
 
 
@@ -84,7 +80,8 @@ ul{
 #table1 td{
   display: flex;
   flex-direction: column;
-  border: 1px solid #000000;
+  border: 3px solid #000000;
+  background-color: #009130;
 }
 
 tr{
@@ -93,7 +90,7 @@ tr{
 }
 
 td{
-  border: 1px solid black;
+  border: 3px solid black;
   padding: 10px;
   text-align:left 10px; 
 }
@@ -111,7 +108,8 @@ th{
 #table2 td{
   display: flex;
   flex-direction: column;
-  border: 1px solid #000000;
+  border: 3px solid #000000;
+  background-color: #009130;
 }
 
 tr{
@@ -120,7 +118,7 @@ tr{
 }
 
 td{
-  border: 1px solid black;
+  border: 3px solid black;
   padding: 1px;
   text-align:left 10px; 
 }
