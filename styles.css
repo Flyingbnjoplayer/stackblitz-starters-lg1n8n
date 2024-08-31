@@ -84,7 +84,7 @@ ul{
 #table1 td{
   display: flex;
   flex-direction: column;
-  border: 6px solid #000000;
+  border: 1px solid #000000;
 }
 
 tr{
@@ -111,7 +111,7 @@ th{
 #table2 td{
   display: flex;
   flex-direction: column;
-  border: 6px solid #000000;
+  border: 1px solid #000000;
 }
 
 tr{
@@ -121,7 +121,7 @@ tr{
 
 td{
   border: 1px solid black;
-  padding: 10px;
+  padding: 1px;
   text-align:left 10px; 
 }
 
