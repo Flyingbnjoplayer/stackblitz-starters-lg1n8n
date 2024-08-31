@@ -135,11 +135,18 @@ th{
 /*tabellen naast elkaar*/
 
 .table-container{
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
 }
 
-.table1,.table2{
-  display: inline-block;
-  vertical-align: text-bottom;
-  margin: 18px;
+table{
+  border-collapse: collapse;
+  width: 10%;
+  margin: 10px;
+}
+
+th,td{
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
 }
