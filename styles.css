@@ -83,7 +83,6 @@ table .nodot{
   flex-direction: column;
   border: 3px solid #000000;
   padding: 18px 9px;
-  background-color: #48ff00;
 }
 
 tr{
@@ -94,10 +93,12 @@ tr{
 td{
   border: 3px solid black;
   text-align:left 10px; 
+  background-color: #48ff00;
 }
 
 th{
   border: 3px solid black;
+  font-weight: bold;
   text-align:left 20px; 
   background-color: #caff08;
 }
@@ -112,7 +113,6 @@ th{
   flex-direction: column;
   border: 3px solid #000000;
   padding: 18px 9px; /*x px boven en onder, x px rechts en links*/
-  background-color: #48ff00;
 }
 
 tr{
@@ -123,10 +123,13 @@ tr{
 td{
   border: 3px solid black;
   text-align:left 10px; 
+  background-color: #48ff00;
 }
+
 
 th{
   border: 3px solid black;
+  font-weight: bold;
   text-align:left 20px; 
   background-color: #caff08;
 }
