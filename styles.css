@@ -58,12 +58,13 @@ h2 {
 }
 
 #socials{     /*id van <th> van <table1>*/
-  color:#000000
+  border-color:#000000
   text-align;left: 10px
 }
 
 #onchain{     /*id van <th> van <table2>*/
   border-color:#000000
+  text-align
 }
 
 table ul{
@@ -96,6 +97,7 @@ td{
 }
 
 th{
+  border: 3px solid black;
   text-align:left 20px; 
   background-color: #caff08;
 }
@@ -124,6 +126,7 @@ td{
 }
 
 th{
+  border: 3px solid black;
   text-align:left 20px; 
   background-color: #caff08;
 }
@@ -135,6 +138,7 @@ th{
 .table-container{
   display: flex;
   justify-content: space-between;
+  gap: 18px; /*ruimte tussen table 1 & 2*/
 }
 
 table{
