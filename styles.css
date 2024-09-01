@@ -111,6 +111,7 @@ th{
   display: flex;
   flex-direction: column;
   border: 3px solid #000000;
+  padding-left: 9px;
   background-color: #48ff00;
 }
 
