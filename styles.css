@@ -64,7 +64,7 @@ h2 {
 
 #onchain{     /*id van <th> van <table2>*/
   border-color:#000000
-  text-align
+  text-align; left: 10px
 }
 
 table ul{
