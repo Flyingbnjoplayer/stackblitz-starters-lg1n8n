@@ -141,7 +141,7 @@ th{
 .table-container{
   display: flex;
   justify-content: space-between;
-  column-gap: 18px; /*ruimte tussen table 1 & 2*/
+  column-gap: normal; /*ruimte tussen table 1 & 2*/
 }
 
 table{
