@@ -47,7 +47,9 @@ h1 {
 }
 
 #welcome {
+  font:Georgia;
   font-size: 3rem;
+  font-weight: 600;
   text-decoration: overline;
   text-shadow: 3px 9px 6px #00FFFF;
   color: #0631ec;
@@ -84,7 +86,30 @@ td {
 }
 
 th {
+  
   font-weight: bold;
   font-style: oblique;
   background-color: #caff08;
+}
+
+tr:nth-child(odd){
+  background-color: red;
+}
+
+tr:nth-child(even){
+  background-color: #48ff00;
+}
+a:link{
+  color:chartreuse;
+  background-color: darkgreen;
+}
+
+a:hover{
+  color:#0631ec;
+  background-color:lightgreen;
+}
+
+a:active{
+  color:yellow;
+  background-color: darkgreen;
 }
