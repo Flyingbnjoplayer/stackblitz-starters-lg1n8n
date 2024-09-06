@@ -72,7 +72,7 @@ table {
 th, td {
   border: 3px solid black;
   text-align: left;
-  padding: 18px 9px;
+  padding: 18px 36px 9px 36px;
 }
 
 td {
