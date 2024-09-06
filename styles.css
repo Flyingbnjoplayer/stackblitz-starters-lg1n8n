@@ -62,8 +62,8 @@ h1 {
 
 .table-container {
   display: flex;
-  justify-content: space-between;
-  column-gap: 50%;
+  justify-content: center;
+  gap: 6%;
 }
 
 table {
@@ -75,7 +75,7 @@ table {
 th, td {
   border: 3px solid black;
   text-align: left;
-  padding: 18px 36px 9px 36px;
+  padding: 3px 36px 9px 36px;
 }
 
 td {
