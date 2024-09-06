@@ -48,11 +48,14 @@ h1 {
 
 #welcome {
   font-size: 36px;
+  text-decoration: underline overline;
+  text-shadow: 3px 9px 6px #00FFFF;
   color: #0631ec;
 }
 
 #socials, #onchain {
   font-size: 27px;
+  text-decoration: underline;
   border-color: #000000;
   text-align: left;
 }
@@ -65,7 +68,7 @@ h1 {
 
 table {
   border-collapse: collapse;
-  width: 0;
+  width: 36%;
   margin: 0;
 }
 
@@ -77,9 +80,11 @@ th, td {
 
 td {
   background-color: #48ff00;
+  font-style: arial;
 }
 
 th {
   font-weight: bold;
+  font-style: oblique;
   background-color: #caff08;
 }
