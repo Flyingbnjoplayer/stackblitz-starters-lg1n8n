@@ -47,8 +47,8 @@ h1 {
 }
 
 #welcome {
-  font-size: 36px;
-  text-decoration: underline overline;
+  font-size: 3rem;
+  text-decoration: overline;
   text-shadow: 3px 9px 6px #00FFFF;
   color: #0631ec;
 }
