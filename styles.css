@@ -92,13 +92,14 @@ th {
   background-color: #caff08;
 }
 
-tr:nth-child(odd){
+/*tr:nth-child(odd){
   background-color: red;
 }
 
 tr:nth-child(even){
   background-color: #48ff00;
-}
+}*/
+
 a:link{
   color:chartreuse;
   background-color: darkgreen;
