@@ -70,6 +70,7 @@ h1 {
 
 table {
   border-collapse: collapse;
+  border-radius:36%;
   width: 36%;
   margin: 0;
 }
@@ -111,6 +112,6 @@ a:hover{
 }
 
 a:active{
-  color:yellow;
+  color:#00FFFF;
   background-color: darkgreen;
 }
