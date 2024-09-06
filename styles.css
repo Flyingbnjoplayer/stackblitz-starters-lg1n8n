@@ -47,10 +47,12 @@ h1 {
 }
 
 #welcome {
+  font-size: 36px;
   color: #0631ec;
 }
 
 #socials, #onchain {
+  font-size: 27px;
   border-color: #000000;
   text-align: left;
 }
@@ -58,7 +60,7 @@ h1 {
 .table-container {
   display: flex;
   justify-content: space-between;
-  column-gap: 18px;
+  column-gap: 50%;
 }
 
 table {
