@@ -70,7 +70,7 @@ h1 {
 
 table {
   border-collapse: collapse;
-  border-radius:36%;
+  border-width: 6px;
   width: 36%;
   margin: 0;
 }
