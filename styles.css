@@ -104,14 +104,17 @@ tr:nth-child(even){
 a:link{
   color:chartreuse;
   background-color: darkgreen;
+  text-decoration-style: none;
 }
 
 a:hover{
   color:#0631ec;
   background-color:lightgreen;
+  text-decoration-style: none;
 }
 
 a:active{
   color:#2bff00;
   background-color: rgb(100, 0, 87);
+  text-decoration-style: none;
 }
