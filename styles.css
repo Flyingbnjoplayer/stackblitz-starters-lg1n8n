@@ -118,3 +118,9 @@ a:active{
   background-color: rgb(100, 0, 87);
   text-decoration-style: none;
 }
+
+a:visited{
+  color:#2bff00;
+  background-color: rgb(100, 0, 87);
+  text-decoration-style: none;
+}
