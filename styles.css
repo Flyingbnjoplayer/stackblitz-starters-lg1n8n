@@ -58,8 +58,9 @@ h1 {
 #socials, #onchain {
   font-size: 27px;
   text-decoration: underline;
+  text-shadow: 1px 3px 2px #FFFFFF;
   border-color: #000000;
-  text-align: left;
+  text-align: center;
 }
 
 .table-container {
@@ -70,13 +71,14 @@ h1 {
 
 table {
   border-collapse: collapse;
-  border-width: 6px;
+  
   width: 36%;
   margin: 0;
 }
 
 th, td {
   border: 3px solid black;
+  border-width: 6px;
   text-align: left;
   padding: 9px 36px 9px 36px;
 }
