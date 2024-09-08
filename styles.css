@@ -61,9 +61,9 @@ h1 {
 }
 
 #socials, #onchain {
-  font-size: 27px;
+  font-size: 1.5rem;
   text-decoration: underline;
-  text-shadow: 1px 3px 2px #FFFFFF;
+  text-shadow: 2px 6px 3px #FFFFFF;
   border-color: #000000;
   
 }
@@ -78,7 +78,7 @@ table {
   border-collapse: collapse;
   
   width: 36%;
-  margin: 0;
+  margin: 1rem;
 }
 
 th, td {
@@ -128,7 +128,7 @@ a:active{
 }
 
 .table1,.table2 a:visited{
-  color:#2bff00;
-  background-color: rgb(100, 0, 87);
+  color:rgb(100, 0, 87);
+  background-color: darkgreen;
   text-decoration-style: none;
 }
