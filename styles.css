@@ -137,9 +137,8 @@ a:active{
 .tablecontainer-page2 {
   display: flex;
   flex-wrap: column;
-  box-sizing:content-box;
   justify-content:space-evenly;
-  
+
 }
 
 td.table-page2 {
