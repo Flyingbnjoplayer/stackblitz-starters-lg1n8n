@@ -1,24 +1,22 @@
-console.log('Hello!');
 document.addEventListener('DOMContentLoaded', () => {
-    const audios = document.querySelectorAll('audio');
-    let currentAudioIndex = 0;
+    const iframes = document.querySelectorAll('iframe');
+    let currentIframeIndex = 0;
   
-    const showAudio = (index) => {
-      audios.forEach((audio, i) => {
-        audio.classList.toggle('active', i === index);
+    const showIframe = (index) => {
+      iframes.forEach((iframe, i) => {
+        iframe.classList.toggle('active', i === index);
       });
     };
   
     document.getElementById('prev').addEventListener('click', () => {
-      currentAudioIndex = (currentAudioIndex - 1 + audios.length) % audios.length;
-      showAudio(currentAudioIndex);
+      currentIframeIndex = (currentIframeIndex - 1 + iframes.length) % iframes.length;
+      showIframe(currentIframeIndex);
     });
   
     document.getElementById('next').addEventListener('click', () => {
-      currentAudioIndex = (currentAudioIndex + 1) % audios.length;
-      showAudio(currentAudioIndex);
+      currentIframeIndex = (currentIframeIndex + 1) % iframes.length;
+      showIframe(currentIframeIndex);
     });
   
-    showAudio(currentAudioIndex);
+    showIframe(currentIframeIndex);
   });
-  

@@ -161,10 +161,10 @@ td.table-page2 {
   align-items: center;
 }
 
-audio {
+iframe {
   display: none;
 }
 
-audio.active {
+iframe.active {
   display: block;
 }
