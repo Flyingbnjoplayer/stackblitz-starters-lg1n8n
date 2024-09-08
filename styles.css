@@ -27,7 +27,7 @@ nav a {
   border-radius: 0.2rem;
   border: solid 3px #000000;
   text-align: center;
-  text-decoration: none;
+  text-decoration-style: none;
   color: #fbff00;
 }
 
@@ -64,7 +64,7 @@ h1 {
   color:#000000; 
   font-size: 1.5rem;
   text-decoration: underline;
-  text-shadow: 2px 6px 3px #FFFFFF;
+  text-shadow: 3px 9px  #FFFFFF;
   border-color: #000000;
   
 }
@@ -113,23 +113,23 @@ tr:nth-child(even){
 a:link{
   color:chartreuse;
   background-color: darkgreen;
-  text-decoration-style: none;
+  text-decoration: none;
 }
 
 a:hover{
   color:#0631ec;
   background-color:lightgreen;
-  text-decoration-style: none;
+  text-decoration: none;
 }
 
 a:active{
   color:#2bff00;
   background-color: rgb(100, 0, 87);
-  text-decoration-style: none;
+  text-decoration: none;
 }
 
 .table1,.table2 a:visited{
   color:rgb(100, 0, 87);
   background-color: darkgreen;
-  text-decoration-style: none;
+  text-decoration: none;
 }
