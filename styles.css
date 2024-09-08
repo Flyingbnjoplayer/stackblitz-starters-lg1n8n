@@ -133,3 +133,9 @@ a:active{
   background-color: darkgreen;
   text-decoration: none;
 }
+
+.tablecontainer-page2 {
+  display: flex;
+  justify-content: center;
+  gap: 6%;
+}
