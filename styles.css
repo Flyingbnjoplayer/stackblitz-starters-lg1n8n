@@ -148,3 +148,23 @@ td.table-page2 {
   margin-top: .3rem;
   margin-bottom: .3rem;
 }
+
+.audio-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.audio-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+audio {
+  display: none;
+}
+
+audio.active {
+  display: block;
+}

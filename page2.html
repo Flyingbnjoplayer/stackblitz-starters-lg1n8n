@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Other page</title>
+    <title>My Music</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="styles.css" />
@@ -10,30 +10,25 @@
   <body>
     <nav>
       <a href="/">Home</a>
-      <a href="/page2.html" aria-current="page">my music</a>
+      <a href="/page2.html" aria-current="page">My music</a>
     </nav>
     <main>
-      <h1>My music</h1>
+      <h1>My Music</h1>
+      <div class="audio-container">
+        <button id="prev">Previous</button>
+        <div class="audio-wrapper">
+          <audio id="audio1" controls>
+            <source src="audio1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+          <audio id="audio2" controls>
+            <source src="audio2.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+          <!-- Voeg hier meer audio-elementen toe -->
+        </div>
+        <button id="next">Next</button>
+      </div>
     </main>
-      <h2>Soundcloud</h2>
-      <div class="tablecontainer-page2">
-        <table class="table-page2">
-          <tr>
-            <td><iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1416402340&color=%23ff5500&inverse=true&auto_play=false&show_user=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-539837303" title="Blanda Beats" target="_blank" style="color: #cccccc; text-decoration: none;">Blanda Beats</a> · <a href="https://soundcloud.com/user-539837303/ohjajoh" title="Ohjajoh" target="_blank" style="color: #cccccc; text-decoration: none;">Ohjajoh</a></div></td>
-
-            <td><iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1764354747&color=%23ff5500&inverse=true&auto_play=false&show_user=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-539837303" title="Blanda Beats" target="_blank" style="color: #cccccc; text-decoration: none;">Blanda Beats</a> · <a href="https://soundcloud.com/user-539837303/objects-in-the-air" title="Objects in the air" target="_blank" style="color: #cccccc; text-decoration: none;">Objects in the air</a></div></td>
-
-            <td><iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/345457767&color=%23ff5500&inverse=true&auto_play=false&show_user=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-539837303" title="Blanda Beats" target="_blank" style="color: #cccccc; text-decoration: none;">Blanda Beats</a> · <a href="https://soundcloud.com/user-539837303/organic-electronics" title="Organic Electronics" target="_blank" style="color: #cccccc; text-decoration: none;">Organic Electronics</a></div></td>
-            
-            <td><iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/320197727&color=%23ff5500&inverse=true&auto_play=false&show_user=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-539837303" title="Blanda Beats" target="_blank" style="color: #cccccc; text-decoration: none;">Blanda Beats</a> · <a href="https://soundcloud.com/user-539837303/spoekie" title="Spoekie" target="_blank" style="color: #cccccc; text-decoration: none;">Spoekie</a></div></td>
-
-            <td><iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/327500889&color=%23ff5500&inverse=true&auto_play=false&show_user=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-539837303" title="Blanda Beats" target="_blank" style="color: #cccccc; text-decoration: none;">Blanda Beats</a> · <a href="https://soundcloud.com/user-539837303/rammer" title="Rammer" target="_blank" style="color: #cccccc; text-decoration: none;">Rammer</a></div></td>
-          </tr>  
-          <tr>
-            <td><button>prev</button></td>
-            <td><button>next</button></td>
-          </tr>
-        </table>  
-      </div>    
   </body>
 </html>
