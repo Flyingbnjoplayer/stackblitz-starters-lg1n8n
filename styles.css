@@ -136,6 +136,7 @@ a:active{
 
 .tablecontainer-page2 {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin: 3%;
 }
