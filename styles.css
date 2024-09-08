@@ -137,5 +137,11 @@ a:active{
 .tablecontainer-page2 {
   display: flex;
   justify-content: center;
-  gap: 6%;
+  margin: 3%;
+}
+
+.table-page2 {
+  padding: 6%;
+  border-width: 3%;
+  margin: 9%;
 }
