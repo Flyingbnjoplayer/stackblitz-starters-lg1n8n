@@ -134,6 +134,8 @@ a:active{
   text-decoration: none;
 }
 
+/*mainpage end, page 2 start*/
+
 .tablecontainer-page2 {
   display: flex;
   flex-wrap: column;
@@ -167,4 +169,16 @@ iframe {
 
 iframe.active {
   display: block;
+}
+
+.button1{
+  margin: 18px;
+  padding: 27px;
+  border-radius: 18%;
+}
+
+.button1:active{
+  transform:translate (18px)
+  rotate(90deg) scale(3);
+  background-color: #00FFFF;
 }
