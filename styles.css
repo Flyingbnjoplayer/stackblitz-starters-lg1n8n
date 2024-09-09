@@ -51,6 +51,18 @@ h1 {
   text-align: center;
 }
 
+h2{
+  font-weight: 400;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+p{
+  font-weight: 400;
+  font-size: 1rem;
+  text-align: center;
+}
+
 #welcome {
   font:Georgia;
   font-size: 2rem;
