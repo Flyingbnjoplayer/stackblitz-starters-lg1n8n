@@ -77,7 +77,8 @@ p{
   font-size: 1.5rem;
   text-decoration: underline;
   text-decoration-style: wavy;
-  text-shadow: 2px 3px  #FFFFFF;
+  text-underline-offset: 6px left;
+  text-shadow: 2px 1px  #FF0000;
   border-color: #000000;
 }
 
