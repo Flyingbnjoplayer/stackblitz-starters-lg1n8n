@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'https://drive.google.com/file/d/1-LfWJY9eeTe9TyLF9Em6UNLkVdT9Jo6G/view?usp=sharing.png',
             'https://drive.google.com/file/d/19Xww4qarS3JfUzQvsye7lSxq5E9d8bya/view?usp=sharing.png',
             'https://drive.google.com/file/d/19crEsAEP5bQvFZWXCsix8h1jPjgRnPQ0/view?usp=sharing.png',
+            //nog eens 8 (of minder)
             'https://drive.google.com/file/d/19llb8fne02xVKTO90ErEezVjvotGa4fG/view?usp=sharing.png',
             'https://drive.google.com/file/d/19xQJ1UskD9IZMnPCRTLPHIZvsvH2oh8p/view?usp=sharing.png',
             'https://drive.google.com/file/d/19tFwiLCfJFrSF_Gd-CV-JFPDHlIThj1W/view?usp=sharing.png',
