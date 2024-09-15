@@ -178,10 +178,9 @@ a:active{
 .gallery-container {
   width: 90%;
   max-width: 600px;
-  margin: auto;
+  margin: 1%;
   background-color: #48ff00;
-  
-  padding: 20px;
+  padding: 3%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
