@@ -111,6 +111,7 @@ p{
 .table-container {
   display: flex;
   justify-content: center;
+  padding: 3%;
   gap: 3%;
 }
 
@@ -125,7 +126,7 @@ th, td {
   border: 3px solid black;
   border-width: 6px;
   text-align: left;
-  padding: 9px 36px 9px 36px;
+  padding: 6% 24% 6% 24%;
   margin: .3rem;
 }
 
