@@ -64,8 +64,6 @@ h3{
   font-size: 1rem;
   text-align: center;
   padding: .5rem;
-  border: 3px black;
-  background-color: #caff08;
 }
 
 p{
@@ -81,6 +79,8 @@ p{
   display: flex;
   justify-content: end;
   border-top: solid 9px #caff08;
+  margin-bottom: 0%;
+  text-align: center;
 }
 
 .welcome {
