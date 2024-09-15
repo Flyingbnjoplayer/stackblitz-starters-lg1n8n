@@ -59,7 +59,7 @@ h2{
   padding: .5rem;
 }
 
-.footer, h3{
+h3.footer{
   font-weight: bold;
   font-size: 3rem;
   font-style: italic;
