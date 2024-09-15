@@ -83,7 +83,7 @@ p{
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 0.5rem;
+  padding-top: 0.1rem;
   border-top: solid 9px #caff08;
   background-color: #0631ec;
 }
@@ -175,8 +175,7 @@ a:active{
 /*afbeeldingen galerij*/
 
 .gallery-container {
-  width: 90%;
-  max-width: 600px;
+  width: 100%;
   margin: auto;
   background-color: #48ff00;
   padding: auto;
@@ -191,7 +190,7 @@ a:active{
 }
 
 .thumbnail img {
-  width: auto;
+  width: 100%;
   height: auto;
   display: block;
 }
@@ -216,6 +215,14 @@ button {
 button:disabled {
   background-color: #ccc;
 }
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+/*end galery*/
 
 /*mainpage end, page 2 start*/
 
