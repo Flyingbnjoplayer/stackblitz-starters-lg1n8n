@@ -116,9 +116,9 @@ p{
 
 table {
   border-collapse: collapse;
-  
+  justify-content: center;
   width: 36%;
-  margin: .5rem;
+  margin: 9%;
 }
 
 th, td {
