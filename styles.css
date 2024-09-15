@@ -72,15 +72,17 @@ p{
   text-align: center;
 }
 
-.footer,h3{
+.footer{
   width: 99%;
-  height: 1rem;
-  background-color: #0631ec;
+  height: 21%;
   display: flex;
-  justify-content: end;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  gap: 0.5rem;
   border-top: solid 9px #caff08;
-  margin-bottom: 0%;
-  text-align: center;
+  background-color: #0631ec;
 }
 
 .welcome {
@@ -92,7 +94,7 @@ p{
   color: #0631ec;
 }
 
-#socials, #onchain {
+#socials, #onchain, #gallery {
   color:#000000; 
   font-size: 1.5rem;
   text-decoration: underline;
