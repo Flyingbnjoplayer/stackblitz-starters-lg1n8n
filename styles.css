@@ -61,7 +61,9 @@ h2{
 
 h3{
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 3.6rem;
+  font-style: italic;
+  text-decoration-style: dashed, wavy;
   text-align: center;
   padding: .5rem;
 }
