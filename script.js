@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // Voeg meer links toe als je wilt
   ];
 
-  const itemsPerPage = 8;
+  const itemsPerPage = 9;
   const totalPages = Math.ceil(images.length / itemsPerPage);
 
   prevBtn.addEventListener('click', function() {
