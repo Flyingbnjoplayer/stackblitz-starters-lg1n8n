@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Voeg hier je embedded links toe
   const images = [
-      'https://drive.google.com/file/d/1-hq9MRwPafc2Do7J9OY05GchbMex_Tnr/view?usp=sharing.png',
+      'https://drive.google.com/thumbnail?id=18ajEqoUA6xd42qWaHAYXYPapU6RUSGcD&sz=w-h.jpg',
       'https://drive.google.com/file/d/1-Wgjup67vX9ntoOOvqMpZWzZ4Li1yL-Z/view?usp=sharing.png',
       'https://drive.google.com/file/d/1-RLHEV2dNijkRh5Si_Cu8Qu03VJkp3aY/view?usp=sharing.png',
       'https://drive.google.com/file/d/1-dLSwSNJ_-FS-yI-yKF26YQci379cgwx/view?usp=sharing.png',
@@ -19,6 +19,17 @@ document.addEventListener('DOMContentLoaded', function() {
       'https://drive.google.com/file/d/19llb8fne02xVKTO90ErEezVjvotGa4fG/view?usp=sharing.png',
       'https://drive.google.com/file/d/19xQJ1UskD9IZMnPCRTLPHIZvsvH2oh8p/view?usp=sharing.png',
       'https://drive.google.com/file/d/19tFwiLCfJFrSF_Gd-CV-JFPDHlIThj1W/view?usp=sharing.png',
+      'https://drive.google.com/thumbnail?id=1KTQOLbit7Q_czRwOdCRUncjNdB_F25U-&sz=w-h.jpg',
+      'https://drive.google.com/thumbnail?id=1MCPFrWmM-z7NUcjTDtO5TpPkpd_nDQtP&sz=w-h.jpg',
+      'https://drive.google.com/thumbnail?id=1VrtklCgRayLsCH0T-w7VpNgpM95V7UrV&sz=w-h.jpg',
+      'https://drive.google.com/thumbnail?id=1bpSqH7NJtMaDB8pGpiMdSRjNRt5b4hI-&sz=w-h.jpg',
+      'https://drive.google.com/thumbnail?id=1gdA7VrzKlDU0OAF_OQmYTdKXEWuZW3HF&sz=w-h.jpg',
+      'https://drive.google.com/thumbnail?id=1gvUhZCoJ6Exwp-DCx0hKB367UpSNmFFp&sz=w-h.jpg',
+      'https://drive.google.com/thumbnail?id=1h1CddLnWJOM2yoNANiDvOInOWrp3za22&sz=w-h.jpg',
+      'https://drive.google.com/thumbnail?id=1h26ox5xEmh5Qel6hqtKPp5h8ju_TTS7k&sz=w-h.jpg',
+      'https://drive.google.com/thumbnail?id=1h2yQUS6VK3G8y7K2EysRhZ1JSbgXK6wS&sz=w-h.jpg',
+      'https://drive.google.com/thumbnail?id=1h7dWhpVvKt1oDQVoZpejMgzgdn3203k2&sz=w-h.jpg',
+      //'',
       // Voeg meer links toe als je wilt
   ];
 
