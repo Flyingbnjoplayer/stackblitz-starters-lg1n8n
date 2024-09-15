@@ -109,14 +109,14 @@ p{
 
 .table-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   
   gap: 3%;
 }
 
 table {
   border-collapse: collapse;
-  justify-content: space-evenly;
+  justify-content: center;
   margin: auto;
 }
 
