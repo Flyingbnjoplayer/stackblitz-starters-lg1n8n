@@ -53,13 +53,13 @@ h1 {
 }
 
 h2{
-  font-weight: 400;
+  font-weight: bold;
   font-size: 1.2rem;
   text-align: center;
   padding: .5rem;
 }
 
-h3{
+.footer, h3{
   font-weight: bold;
   font-size: 3rem;
   font-style: italic;
@@ -179,8 +179,8 @@ a:active{
   max-width: 600px;
   margin: auto;
   background-color: #48ff00;
-  padding: 1%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: auto;
+  box-shadow: 2 1 10px rgba(0, 0, 0, 0.1);
 }
 
 .gallery {
