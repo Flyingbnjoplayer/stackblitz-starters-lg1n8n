@@ -59,12 +59,12 @@ h2{
   padding: .5rem;
 }
 
-h3.footer{
+h3{
   font-weight: bold;
   font-size: 3rem;
   font-style: italic;
   text-decoration: underline;
-  text-decoration-style: dashed, wavy;
+  text-decoration-style: dashed;
   text-shadow: 1px, 1px #caff08;
   text-align: center;
   padding: .1rem, .2rem;
@@ -74,18 +74,6 @@ p{
   font-weight: 400;
   font-size: 1rem;
   text-align: center;
-}
-
-.footer{
-  width: 100%;
-  height: 21%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  padding-top: 0.1rem;
-  border-top: solid 9px #caff08;
-  background-color: #0631ec;
 }
 
 .welcome {
@@ -279,4 +267,23 @@ iframe.active {
   transform:translate (18px)
   rotate(90deg) scale(3);
   background-color: #00801F;
+}
+
+.footer{
+  color:#000000;
+  font-weight: bold;
+  font-size: 3rem;
+  font-style: italic;
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  text-shadow: 1px, 1px #caff08;
+  width: 100%;
+  height: 21%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0.1rem;
+  border-top: solid 9px #caff08;
+  background-color: #0631ec;
 }
