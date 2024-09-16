@@ -4,9 +4,11 @@ document.addEventListener('DOMContentLoaded', function() {
   const nextBtn = document.getElementById('nextBtn');
   const pageNumber = document.getElementById('pageNumber');
   const gallery = document.querySelector('.gallery');
+  const addImageForm = document.getElementById('addImageForm');
+  const imageUrlInput = document.getElementById('imageUrl');
+  const passwordInput = document.getElementById('password');
   let currentPage = 1;
 
-  // Voeg hier je embedded links toe
   const images = [
       'https://drive.google.com/thumbnail?id=18ajEqoUA6xd42qWaHAYXYPapU6RUSGcD&sz=w-h.jpg',
       'https://drive.google.com/thumbnail?id=12Y64kDz66CJ5wrCu0w1NkzRHY4LjT7PU&sz=w-h.jpg',
@@ -31,52 +33,61 @@ document.addEventListener('DOMContentLoaded', function() {
       'https://drive.google.com/thumbnail?id=1mGMFBx26wIKn4nUXxlEW51-17TDz_g2o&sz=w-h.jpg',
       'https://drive.google.com/thumbnail?id=1q2ov8cJWWrjKCiJv_zcmuhbaI4tS0Ygt&sz=w-h.jpg',
       'https://drive.google.com/thumbnail?id=1xb-121ZGhFMptVdVSLbR353UevlGxhV3&sz=w-h.jpg',
-      'https://drive.google.com/thumbnail?id=1ykthhB-3VFO0_abZvCZBecnyMCPNACxQ&sz=w-h.jpg'
-      //'',
-      // Voeg meer links toe als je wilt & vergeet niet de komma na de laatste link te verwijderen
-      
+      'https://drive.google.com/thumbnail?id=1ykthhB-3VFO0_abZvCZBecnyMCPNACxQ&sz=w-h.jpg'    
+    // ... andere afbeeldingen ...
   ];
 
   const itemsPerPage = 9;
   const totalPages = Math.ceil(images.length / itemsPerPage);
 
+  function renderGallery() {
+    gallery.innerHTML = '';
+    const start = (currentPage - 1) * itemsPerPage;
+    const end = start + itemsPerPage;
+    const currentImages = images.slice(start, end);
+
+    currentImages.forEach(src => {
+      const div = document.createElement('div');
+      div.classList.add('thumbnail');
+      const img = document.createElement('img');
+      img.src = src;
+      div.appendChild(img);
+      gallery.appendChild(div);
+    });
+
+    pageNumber.textContent = currentPage;
+  }
+
   prevBtn.addEventListener('click', function() {
-      if (currentPage > 1) {
-          currentPage--;
-          updateGallery();
-      }
+    if (currentPage > 1) {
+      currentPage--;
+      renderGallery();
+    }
   });
 
   nextBtn.addEventListener('click', function() {
-      if (currentPage < totalPages) {
-          currentPage++;
-          updateGallery();
-      }
+    if (currentPage < totalPages) {
+      currentPage++;
+      renderGallery();
+    }
   });
 
-  function updateGallery() {
-      gallery.innerHTML = '';
-      pageNumber.textContent = currentPage;
+  addImageForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const imageUrl = imageUrlInput.value;
+    const password = passwordInput.value;
 
-      const start = (currentPage - 1) * itemsPerPage;
-      const end = start + itemsPerPage;
-      const currentImages = images.slice(start, end);
+    if (password === 'Nattekrentenb0l!') {
+      images.push(imageUrl);
+      renderGallery();
+      imageUrlInput.value = '';
+      passwordInput.value = '';
+    } else {
+      alert('Onjuist wachtwoord!');
+    }
+  });
 
-      currentImages.forEach(src => {
-          const div = document.createElement('div');
-          div.classList.add('thumbnail');
-          const img = document.createElement('img');
-          img.src = src;
-          img.alt = 'Afbeelding';
-          div.appendChild(img);
-          gallery.appendChild(div);
-      });
-
-      prevBtn.disabled = currentPage === 1;
-      nextBtn.disabled = currentPage === totalPages;
-  }
-
-  updateGallery();
+  renderGallery();
 });
 
 //embedded picture galery end
