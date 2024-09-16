@@ -62,12 +62,8 @@ h2{
 h3{
   font-weight: bold;
   font-size: 3rem;
-  font-style: italic;
-  text-decoration: underline;
-  text-decoration-style: dashed;
   text-shadow: 1px, 1px #caff08;
   text-align: center;
-  padding: .1rem, .2rem;
 }
 
 p{
@@ -284,7 +280,11 @@ iframe.active {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding-top: 0.1rem;
+  padding: 9px, auto, 9px, auto;
+  margin-top: 0.1rem;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
   border-top: solid 9px #caff08;
   background-color: #0631ec;
 }
