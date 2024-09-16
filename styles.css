@@ -88,6 +88,7 @@ p{
 #socials, #onchain, #gallery {
   color:#000000; 
   font-size: 1.5rem;
+  font-weight: bold;
   text-decoration: underline;
   text-decoration-style: wavy;
   text-underline-offset: 6px left;
