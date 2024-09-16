@@ -2,10 +2,9 @@
 document.addEventListener('DOMContentLoaded', function() {
   const prevBtn = document.getElementById('prevBtn');
   const nextBtn = document.getElementById('nextBtn');
-  const pageNumber = document.getElementById('pageNumber');
+  const pageNumbers = document.getElementById('pageNumbers');
   const gallery = document.querySelector('.gallery');
   const addImageForm = document.getElementById('addImageForm');
-  const imageUrlInput = document.getElementById('imageUrl');
   const passwordInput = document.getElementById('password');
   let currentPage = 1;
 
@@ -55,7 +54,58 @@ document.addEventListener('DOMContentLoaded', function() {
       gallery.appendChild(div);
     });
 
-    pageNumber.textContent = currentPage;
+    renderPagination();
+  }
+
+  function renderPagination() {
+    pageNumbers.innerHTML = '';
+
+    if (totalPages <= 7) {
+      for (let i = 1; i <= totalPages; i++) {
+        const span = document.createElement('span');
+        span.textContent = i;
+        if (i === currentPage) span.classList.add('active');
+        span.addEventListener('click', () => {
+          currentPage = i;
+          renderGallery();
+        });
+        pageNumbers.appendChild(span);
+      }
+    } else {
+      const createPageButton = (page) => {
+        const span = document.createElement('span');
+        span.textContent = page;
+        if (page === currentPage) span.classList.add('active');
+        span.addEventListener('click', () => {
+          currentPage = page;
+          renderGallery();
+        });
+        return span;
+      };
+
+      pageNumbers.appendChild(createPageButton(1));
+
+      if (currentPage > 4) {
+        const dots = document.createElement('span');
+        dots.textContent = '...';
+        pageNumbers.appendChild(dots);
+      }
+
+      const startPage = Math.max(2, currentPage - 1);
+      const endPage = Math.min(totalPages - 1, currentPage + 1);
+
+      for (let i = startPage; i <= endPage; i++) {
+        pageNumbers.appendChild(createPageButton(i));
+      }
+
+      if (currentPage < totalPages - 3) {
+        const dots = document.createElement('span');
+        dots.textContent = '...';
+        pageNumbers.appendChild(dots);
+      }
+
+      pageNumbers.appendChild(createPageButton(totalPages));
+    }
   }
 
   prevBtn.addEventListener('click', function() {
@@ -74,14 +124,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
   addImageForm.addEventListener('submit', function(event) {
     event.preventDefault();
-    const imageUrl = imageUrlInput.value;
+    const imageUrls = [
+      document.getElementById('imageUrl1').value,
+      document.getElementById('imageUrl2').value,
+      document.getElementById('imageUrl3').value,
+      document.getElementById('imageUrl4').value,
+      document.getElementById('imageUrl5').value,
+      document.getElementById('imageUrl6').value
+    ].filter(url => url);
+
     const password = passwordInput.value;
 
     if (password === 'Nattekrentenb0l!') {
-      images.push(imageUrl);
+      images.push(...imageUrls);
       renderGallery();
-      imageUrlInput.value = '';
-      passwordInput.value = '';
+      addImageForm.reset();
     } else {
       alert('Onjuist wachtwoord!');
     }
