@@ -212,27 +212,27 @@ button:disabled {
 }
 
 /* Styling form img gallery */
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.thumbnail {
+  margin: 5px;
+}
+
 #addImageForm {
   display: flex;
-  justify-content: space-between;
-}
-
-#addImageForm .left-column,
-#addImageForm .middle-column {
-  display: flex;
   flex-direction: column;
-  gap: 10px; /* Ruimte tussen de URL-inputs (verticaal) */
+  gap: 10px;
 }
 
-/* Wachtwoord en submit */
-#addImageForm .right-column {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  gap: 10px; /* Ruimte tussen de wachtwoordinput en de submitknop */
+#addImageForm input[type="text"],
+#addImageForm input[type="password"] {
+  margin-bottom: 10px;
 }
 
-#addImageForm input[type="password"],
 #addImageForm button {
   align-self: flex-start;
 }

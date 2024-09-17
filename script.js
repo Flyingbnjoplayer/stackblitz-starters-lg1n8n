@@ -1,14 +1,15 @@
 //embedded picture galery start
 document.addEventListener('DOMContentLoaded', function() {
-  const prevBtn = document.getElementById('prevBtn');
-  const nextBtn = document.getElementById('nextBtn');
-  const pageNumbers = document.getElementById('pageNumbers');
-  const gallery = document.querySelector('.gallery');
-  const addImageForm = document.getElementById('addImageForm');
-  const passwordInput = document.getElementById('password');
-  let currentPage = 1;
-
-  const images = [
+  document.addEventListener('DOMContentLoaded', function() {
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const pageNumber = document.getElementById('pageNumber');
+    const gallery = document.querySelector('.gallery');
+    const addImageForm = document.getElementById('addImageForm');
+    const passwordInput = document.getElementById('password');
+    let currentPage = 1;
+  
+    const images = [
       'https://drive.google.com/thumbnail?id=18ajEqoUA6xd42qWaHAYXYPapU6RUSGcD&sz=w-h.jpg',
       'https://drive.google.com/thumbnail?id=12Y64kDz66CJ5wrCu0w1NkzRHY4LjT7PU&sz=w-h.jpg',
       'https://drive.google.com/thumbnail?id=16gsjSiwZb3dKBtsGdiatS8R94nT2kN94&sz=w-h.jpg',
@@ -36,7 +37,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // ... andere afbeeldingen ...
   ];
 
-//fotogallerij pics per page  
   const itemsPerPage = 9;
   const totalPages = Math.ceil(images.length / itemsPerPage);
 
@@ -55,62 +55,9 @@ document.addEventListener('DOMContentLoaded', function() {
       gallery.appendChild(div);
     });
 
-    renderPagination();
+    pageNumber.textContent = currentPage;
   }
 
-//automatisch pagineren
-  function renderPagination() {
-    pageNumbers.innerHTML = '';
-
-    if (totalPages <= 7) {
-      for (let i = 1; i <= totalPages; i++) {
-        const span = document.createElement('span');
-        span.textContent = i;
-        if (i === currentPage) span.classList.add('active');
-        span.addEventListener('click', () => {
-          currentPage = i;
-          renderGallery();
-        });
-        pageNumbers.appendChild(span);
-      }
-    } else {
-      const createPageButton = (page) => {
-        const span = document.createElement('span');
-        span.textContent = page;
-        if (page === currentPage) span.classList.add('active');
-        span.addEventListener('click', () => {
-          currentPage = page;
-          renderGallery();
-        });
-        return span;
-      };
-
-      pageNumbers.appendChild(createPageButton(1));
-
-      if (currentPage > 4) {
-        const dots = document.createElement('span');
-        dots.textContent = '...';
-        pageNumbers.appendChild(dots);
-      }
-
-      const startPage = Math.max(2, currentPage - 1);
-      const endPage = Math.min(totalPages - 1, currentPage + 1);
-
-      for (let i = startPage; i <= endPage; i++) {
-        pageNumbers.appendChild(createPageButton(i));
-      }
-
-      if (currentPage < totalPages - 3) {
-        const dots = document.createElement('span');
-        dots.textContent = '...';
-        pageNumbers.appendChild(dots);
-      }
-
-      pageNumbers.appendChild(createPageButton(totalPages));
-    }
-  }
-
-  //navigatie paginering
   prevBtn.addEventListener('click', function() {
     if (currentPage > 1) {
       currentPage--;
@@ -125,24 +72,20 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  //form add pics
   addImageForm.addEventListener('submit', function(event) {
     event.preventDefault();
-    const imageUrls = [
-      document.getElementById('imageUrl1').value,
-      document.getElementById('imageUrl2').value,
-      document.getElementById('imageUrl3').value,
-      document.getElementById('imageUrl4').value,
-      document.getElementById('imageUrl5').value,
-      document.getElementById('imageUrl6').value
-    ].filter(url => url);
-
     const password = passwordInput.value;
 
     if (password === 'Nattekrentenb0l!') {
-      images.push(...imageUrls);
+      for (let i = 1; i <= 12; i++) {
+        const imageUrlInput = document.getElementById(`imageUrl${i}`);
+        if (imageUrlInput && imageUrlInput.value) {
+          images.push(imageUrlInput.value);
+          imageUrlInput.value = '';
+        }
+      }
       renderGallery();
-      addImageForm.reset();
+      passwordInput.value = '';
     } else {
       alert('Onjuist wachtwoord!');
     }
@@ -150,6 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   renderGallery();
 });
+
 
 //embedded picture galery end
 
