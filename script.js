@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const pageNumber = document.getElementById('pageNumber');
   const gallery = document.querySelector('.gallery');
   const addImageForm = document.getElementById('addImageForm');
+  const imageUrlInput = document.getElementById('imageUrl');
   const passwordInput = document.getElementById('password');
   let currentPage = 1;
 
@@ -73,22 +74,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
   addImageForm.addEventListener('submit', function(event) {
     event.preventDefault();
+    const imageUrl = imageUrlInput.value;
     const password = passwordInput.value;
 
     if (password === 'Nattekrentenb0l!') {
-      for (let i = 1; i <= 12; i++) {
-        const imageUrlInput = document.getElementById(`imageUrl${i}`);
-        if (imageUrlInput && imageUrlInput.value) {
-          images.push(imageUrlInput.value);
-          imageUrlInput.value = '';
-        }
-      }
+      images.push(imageUrl);
       renderGallery();
+      imageUrlInput.value = '';
       passwordInput.value = '';
     } else {
       alert('Onjuist wachtwoord!');
     }
   });
+
+  
 
   renderGallery();
 });
