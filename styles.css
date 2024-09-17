@@ -211,24 +211,20 @@ button:disabled {
   }
 }
 
-/*styling form img gallery*/
+/* Styling form img gallery */
 #addImageForm {
   display: flex;
   justify-content: space-between;
 }
 
-#addImageForm .left-column {
-  display: flex;
-  flex-direction: column;
-  gap: 10px; /* Ruimte tussen de URL-inputs (verticaal)*/
-}
-
+#addImageForm .left-column,
 #addImageForm .middle-column {
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Ruimte tussen de URL-inputs (verticaal)*/
+  gap: 10px; /* Ruimte tussen de URL-inputs (verticaal) */
 }
 
+/* Wachtwoord en submit */
 #addImageForm .right-column {
   display: flex;
   flex-direction: column;
@@ -240,8 +236,7 @@ button:disabled {
 #addImageForm button {
   align-self: flex-start;
 }
-/*end galery*/
-
+/* End gallery */
 /*mainpage end, page 2 start*/
 
 .tablecontainer-page2 {
