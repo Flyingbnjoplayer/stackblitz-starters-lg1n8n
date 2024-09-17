@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ... andere afbeeldingen ...
   ];
 
+//fotogallerij pics per page  
   const itemsPerPage = 9;
   const totalPages = Math.ceil(images.length / itemsPerPage);
 
@@ -57,6 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
     renderPagination();
   }
 
+//automatisch pagineren
   function renderPagination() {
     pageNumbers.innerHTML = '';
 
@@ -108,6 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
+  //navigatie paginering
   prevBtn.addEventListener('click', function() {
     if (currentPage > 1) {
       currentPage--;
@@ -122,6 +125,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
+  //form add pics
   addImageForm.addEventListener('submit', function(event) {
     event.preventDefault();
     const imageUrls = [
