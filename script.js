@@ -1,39 +1,38 @@
 //embedded picture galery start
 document.addEventListener('DOMContentLoaded', function() {
-  document.addEventListener('DOMContentLoaded', function() {
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    const pageNumber = document.getElementById('pageNumber');
-    const gallery = document.querySelector('.gallery');
-    const addImageForm = document.getElementById('addImageForm');
-    const passwordInput = document.getElementById('password');
-    let currentPage = 1;
-  
-    const images = [
-      'https://drive.google.com/thumbnail?id=18ajEqoUA6xd42qWaHAYXYPapU6RUSGcD&sz=w-h.jpg',
-      'https://drive.google.com/thumbnail?id=12Y64kDz66CJ5wrCu0w1NkzRHY4LjT7PU&sz=w-h.jpg',
-      'https://drive.google.com/thumbnail?id=16gsjSiwZb3dKBtsGdiatS8R94nT2kN94&sz=w-h.jpg',
-      'https://drive.google.com/thumbnail?id=1Cg2XZ1RAXZjW6zAfZWy7-j3GZbFqs5Ud&sz=w-h.jpg',
-      'https://drive.google.com/thumbnail?id=1NSCTnJm9LAOYA5uTpPRizerVskaiyXFC&sz=w-h.jpg',
-      'https://drive.google.com/thumbnail?id=1OsFnF07jKr1vuN3qhSvlIeqX2ALduaOQ&sz=w-h.jpg',
-      'https://drive.google.com/thumbnail?id=1PJUnbDi_4AyLurGgNzOJ2It9blLDYNhC&sz=w-h.jpg',
-      'https://drive.google.com/thumbnail?id=1SUltEzN7Lbv4mxxQBWSRltP1tVBzKyac&sz=w-h.jpg',
-      'https://drive.google.com/thumbnail?id=1KTQOLbit7Q_czRwOdCRUncjNdB_F25U-&sz=w-h.jpg',
-      'https://drive.google.com/thumbnail?id=1MCPFrWmM-z7NUcjTDtO5TpPkpd_nDQtP&sz=w-h.jpg',
-      'https://drive.google.com/thumbnail?id=1VrtklCgRayLsCH0T-w7VpNgpM95V7UrV&sz=w-h.jpg',
-      'https://drive.google.com/thumbnail?id=1bpSqH7NJtMaDB8pGpiMdSRjNRt5b4hI-&sz=w-h.jpg',
-      'https://drive.google.com/thumbnail?id=1gdA7VrzKlDU0OAF_OQmYTdKXEWuZW3HF&sz=w-h.jpg',
-      'https://drive.google.com/thumbnail?id=1gvUhZCoJ6Exwp-DCx0hKB367UpSNmFFp&sz=w-h.jpg',
-      'https://drive.google.com/thumbnail?id=1h1CddLnWJOM2yoNANiDvOInOWrp3za22&sz=w-h.jpg',
-      'https://drive.google.com/thumbnail?id=1h26ox5xEmh5Qel6hqtKPp5h8ju_TTS7k&sz=w-h.jpg',
-      'https://drive.google.com/thumbnail?id=1h2yQUS6VK3G8y7K2EysRhZ1JSbgXK6wS&sz=w-h.jpg',
-      'https://drive.google.com/thumbnail?id=1h7dWhpVvKt1oDQVoZpejMgzgdn3203k2&sz=w-h.jpg',
-      'https://drive.google.com/thumbnail?id=1h7dWhpVvKt1oDQVoZpejMgzgdn3203k2&sz=w-h.jpg',
-      'https://drive.google.com/thumbnail?id=1iFNLlcPd8i9XHAOyzt0hF55ohtn31lXE&sz=w-h.jpg',
-      'https://drive.google.com/thumbnail?id=1mGMFBx26wIKn4nUXxlEW51-17TDz_g2o&sz=w-h.jpg',
-      'https://drive.google.com/thumbnail?id=1q2ov8cJWWrjKCiJv_zcmuhbaI4tS0Ygt&sz=w-h.jpg',
-      'https://drive.google.com/thumbnail?id=1xb-121ZGhFMptVdVSLbR353UevlGxhV3&sz=w-h.jpg',
-      'https://drive.google.com/thumbnail?id=1ykthhB-3VFO0_abZvCZBecnyMCPNACxQ&sz=w-h.jpg'    
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const pageNumber = document.getElementById('pageNumber');
+  const gallery = document.querySelector('.gallery');
+  const addImageForm = document.getElementById('addImageForm');
+  const passwordInput = document.getElementById('password');
+  let currentPage = 1;
+
+  const images = [
+    'https://drive.google.com/thumbnail?id=18ajEqoUA6xd42qWaHAYXYPapU6RUSGcD&sz=w-h.jpg',
+    'https://drive.google.com/thumbnail?id=12Y64kDz66CJ5wrCu0w1NkzRHY4LjT7PU&sz=w-h.jpg',
+    'https://drive.google.com/thumbnail?id=16gsjSiwZb3dKBtsGdiatS8R94nT2kN94&sz=w-h.jpg',
+    'https://drive.google.com/thumbnail?id=1Cg2XZ1RAXZjW6zAfZWy7-j3GZbFqs5Ud&sz=w-h.jpg',
+    'https://drive.google.com/thumbnail?id=1NSCTnJm9LAOYA5uTpPRizerVskaiyXFC&sz=w-h.jpg',
+    'https://drive.google.com/thumbnail?id=1OsFnF07jKr1vuN3qhSvlIeqX2ALduaOQ&sz=w-h.jpg',
+    'https://drive.google.com/thumbnail?id=1PJUnbDi_4AyLurGgNzOJ2It9blLDYNhC&sz=w-h.jpg',
+    'https://drive.google.com/thumbnail?id=1SUltEzN7Lbv4mxxQBWSRltP1tVBzKyac&sz=w-h.jpg',
+    'https://drive.google.com/thumbnail?id=1KTQOLbit7Q_czRwOdCRUncjNdB_F25U-&sz=w-h.jpg',
+    'https://drive.google.com/thumbnail?id=1MCPFrWmM-z7NUcjTDtO5TpPkpd_nDQtP&sz=w-h.jpg',
+    'https://drive.google.com/thumbnail?id=1VrtklCgRayLsCH0T-w7VpNgpM95V7UrV&sz=w-h.jpg',
+    'https://drive.google.com/thumbnail?id=1bpSqH7NJtMaDB8pGpiMdSRjNRt5b4hI-&sz=w-h.jpg',
+    'https://drive.google.com/thumbnail?id=1gdA7VrzKlDU0OAF_OQmYTdKXEWuZW3HF&sz=w-h.jpg',
+    'https://drive.google.com/thumbnail?id=1gvUhZCoJ6Exwp-DCx0hKB367UpSNmFFp&sz=w-h.jpg',
+    'https://drive.google.com/thumbnail?id=1h1CddLnWJOM2yoNANiDvOInOWrp3za22&sz=w-h.jpg',
+    'https://drive.google.com/thumbnail?id=1h26ox5xEmh5Qel6hqtKPp5h8ju_TTS7k&sz=w-h.jpg',
+    'https://drive.google.com/thumbnail?id=1h2yQUS6VK3G8y7K2EysRhZ1JSbgXK6wS&sz=w-h.jpg',
+    'https://drive.google.com/thumbnail?id=1h7dWhpVvKt1oDQVoZpejMgzgdn3203k2&sz=w-h.jpg',
+    'https://drive.google.com/thumbnail?id=1h7dWhpVvKt1oDQVoZpejMgzgdn3203k2&sz=w-h.jpg',
+    'https://drive.google.com/thumbnail?id=1iFNLlcPd8i9XHAOyzt0hF55ohtn31lXE&sz=w-h.jpg',
+    'https://drive.google.com/thumbnail?id=1mGMFBx26wIKn4nUXxlEW51-17TDz_g2o&sz=w-h.jpg',
+    'https://drive.google.com/thumbnail?id=1q2ov8cJWWrjKCiJv_zcmuhbaI4tS0Ygt&sz=w-h.jpg',
+    'https://drive.google.com/thumbnail?id=1xb-121ZGhFMptVdVSLbR353UevlGxhV3&sz=w-h.jpg',
+    'https://drive.google.com/thumbnail?id=1ykthhB-3VFO0_abZvCZBecnyMCPNACxQ&sz=w-h.jpg'   
     // ... andere afbeeldingen ...
   ];
 
@@ -94,7 +93,6 @@ document.addEventListener('DOMContentLoaded', function() {
   renderGallery();
 });
 
-
 //embedded picture galery end
 
 //embedded audio container start
@@ -120,4 +118,5 @@ document.addEventListener('DOMContentLoaded', () => {
  
     showIframe(currentIframeIndex);
   });
+
   //embedded audio container end
