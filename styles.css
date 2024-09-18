@@ -222,32 +222,9 @@ button:disabled {
   margin: 5px;
 }
 
-#prevBtn, #nextBtn button:disabled {
-  background-color: #ccc;
-}
-
 #addImageForm {
   display: flex;
-  justify-content: space-between;
-}
-
-#addImageForm .left-column {
-  display: flex;
-  flex-direction: column;
-  gap: 10px; /* Ruimte tussen de URL-inputs */
-}
-
-#addImageForm .middle-column {
-  display: flex;
-  flex-direction: column;
-  gap: 10px; /* Ruimte tussen de URL-inputs */
-}
-
-#addImageForm .right-column {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  gap: 10px; /* Ruimte tussen de wachtwoordinput en de submitknop */
+  justify-content: column;
 }
 
 #addImageForm input[type="password"],
