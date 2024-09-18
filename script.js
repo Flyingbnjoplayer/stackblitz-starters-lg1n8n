@@ -1,13 +1,12 @@
 //embedded picture galery start
+
 document.addEventListener('DOMContentLoaded', function() {
   const prevBtn = document.getElementById('prevBtn');
   const nextBtn = document.getElementById('nextBtn');
   const pageNumber = document.getElementById('pageNumber');
   const gallery = document.querySelector('.gallery');
   const addImageForm = document.getElementById('addImageForm');
-  const imageUrlInput = document.getElementById('imageUrl');
   const passwordInput = document.getElementById('password');
-  let currentPage = 1;
 
   const images = [
     'https://drive.google.com/thumbnail?id=18ajEqoUA6xd42qWaHAYXYPapU6RUSGcD&sz=w-h.jpg',
@@ -33,20 +32,17 @@ document.addEventListener('DOMContentLoaded', function() {
     'https://drive.google.com/thumbnail?id=1mGMFBx26wIKn4nUXxlEW51-17TDz_g2o&sz=w-h.jpg',
     'https://drive.google.com/thumbnail?id=1q2ov8cJWWrjKCiJv_zcmuhbaI4tS0Ygt&sz=w-h.jpg',
     'https://drive.google.com/thumbnail?id=1xb-121ZGhFMptVdVSLbR353UevlGxhV3&sz=w-h.jpg',
-    'https://drive.google.com/thumbnail?id=1ykthhB-3VFO0_abZvCZBecnyMCPNACxQ&sz=w-h.jpg'   
-    // ... andere afbeeldingen ...
+    'https://drive.google.com/thumbnail?id=1ykthhB-3VFO0_abZvCZBecnyMCPNACxQ&sz=w-h.jpg'
   ];
 
   const itemsPerPage = 9;
-  const totalPages = Math.ceil(images.length / itemsPerPage);
+  let currentPage = 1;
 
   function renderGallery() {
     gallery.innerHTML = '';
     const start = (currentPage - 1) * itemsPerPage;
     const end = start + itemsPerPage;
-    const currentImages = images.slice(start, end);
-
-    currentImages.forEach(src => {
+    images.slice(start, end).forEach(src => {
       const div = document.createElement('div');
       div.classList.add('thumbnail');
       const img = document.createElement('img');
@@ -54,7 +50,6 @@ document.addEventListener('DOMContentLoaded', function() {
       div.appendChild(img);
       gallery.appendChild(div);
     });
-
     pageNumber.textContent = currentPage;
   }
 
@@ -66,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   nextBtn.addEventListener('click', function() {
-    if (currentPage < totalPages) {
+    if (currentPage < Math.ceil(images.length / itemsPerPage)) {
       currentPage++;
       renderGallery();
     }
@@ -74,24 +69,46 @@ document.addEventListener('DOMContentLoaded', function() {
 
   addImageForm.addEventListener('submit', function(event) {
     event.preventDefault();
-    const imageUrl = imageUrlInput.value;
-    const password = passwordInput.value;
-
-    if (password === 'Nattekrentenb0l!') {
-      images.push(imageUrl);
+    if (passwordInput.value === 'Nattekrentenb0l!') {
+      for (let i = 1; i <= 12; i++) {
+        const imageUrlInput = document.getElementById(`imageUrl${i}`);
+        if (imageUrlInput && imageUrlInput.value) {
+          images.push(imageUrlInput.value);
+          imageUrlInput.value = '';
+        }
+      }
       renderGallery();
-      imageUrlInput.value = '';
       passwordInput.value = '';
     } else {
       alert('Onjuist wachtwoord!');
     }
   });
 
-  
-
   renderGallery();
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const iframes = document.querySelectorAll('iframe');
+  let currentIframeIndex = 0;
+
+  const showIframe = (index) => {
+    iframes.forEach((iframe, i) => {
+      iframe.classList.toggle('active', i === index);
+    });
+  };
+
+  document.getElementById('prev').addEventListener('click', () => {
+    currentIframeIndex = (currentIframeIndex - 1 + iframes.length) % iframes.length;
+    showIframe(currentIframeIndex);
+  });
+
+  document.getElementById('next').addEventListener('click', () => {
+    currentIframeIndex = (currentIframeIndex + 1) % iframes.length;
+    showIframe(currentIframeIndex);
+  });
+
+  showIframe(currentIframeIndex);
+});
 //embedded picture galery end
 
 //embedded audio container start
