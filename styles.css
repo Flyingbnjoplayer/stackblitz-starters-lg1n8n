@@ -273,24 +273,6 @@ iframe.active {
   display: block;
 }
 
-.button1{
-  margin: 18px;
-  padding: 27px;
-  border-radius: 18%;
-}
-
-.button1:active{
-  transform:translate (18px)
-  rotate(90deg) scale(3);
-  background-color: #00FFFF;
-}
-
-.button1:hover{
-  transform:translate (18px)
-  rotate(90deg) scale(3);
-  background-color: #00801F;
-}
-
 .footer{
   color:#000000;
   font-weight: bold;

@@ -106,12 +106,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  document.getElementById('prev').addEventListener('click', () => {
+  document.getElementById('prevBtn').addEventListener('click', () => {
     currentIframeIndex = (currentIframeIndex - 1 + iframes.length) % iframes.length;
     showIframe(currentIframeIndex);
   });
 
-  document.getElementById('next').addEventListener('click', () => {
+  document.getElementById('nextBtn').addEventListener('click', () => {
     currentIframeIndex = (currentIframeIndex + 1) % iframes.length;
     showIframe(currentIframeIndex);
   });
