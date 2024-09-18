@@ -1,7 +1,9 @@
 //embedded picture galery start
 document.addEventListener('DOMContentLoaded', function() {
-  const prevBtn = document.getElementById('prevBtn');
-  const nextBtn = document.getElementById('nextBtn');
+  const prevBtn = document.getElementById('prevBtn','prevBut');
+  const nextBtn = document.getElementById('nextBtn','nextBut');
+ 
+  const prevBut = document.getElementById('nextBut');
   const pageNumber = document.getElementById('pageNumber');
   const gallery = document.querySelector('.gallery');
   const linkForm = document.getElementById('linkForm');
@@ -43,20 +45,22 @@ document.addEventListener('DOMContentLoaded', function() {
   const itemsPerPage = 9;
   const totalPages = Math.ceil(images.length / itemsPerPage);
 
+//document.addEventListener('DOMContentLoaded', function() {
   prevBtn.addEventListener('click', function() {
     if (currentPage > 1) {
       currentPage--;
       updateGallery();
     }
   });
-
+;
   nextBtn.addEventListener('click', function() {
     if (currentPage < totalPages) {
       currentPage++;
       updateGallery();
     }
   });
-
+//});
+});
   linkForm.addEventListener('submit', function(event) {
     event.preventDefault();
     if (password.value === 'Nattekrentenb0l!') {
@@ -93,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   updateGallery();
-});
+;
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -115,9 +119,9 @@ document.addEventListener('DOMContentLoaded', () => {
     currentIframeIndex = (currentIframeIndex + 1) % iframes.length;
     showIframe(currentIframeIndex);
   });
-
-  showIframe(currentIframeIndex);
 });
+  showIframe(currentIframeIndex);
+;
 //embedded picture galery end
 
 //embedded audio container start
@@ -131,12 +135,12 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     };
  
-    document.getElementById('prev').addEventListener('click', () => {
+    document.getElementById('prevBut').addEventListener('click', () => {
       currentIframeIndex = (currentIframeIndex - 1 + iframes.length) % iframes.length;
       showIframe(currentIframeIndex);
     });
  
-    document.getElementById('next').addEventListener('click', () => {
+    document.getElementById('nextBut').addEventListener('click', () => {
       currentIframeIndex = (currentIframeIndex + 1) % iframes.length;
       showIframe(currentIframeIndex);
     });
