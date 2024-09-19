@@ -1,9 +1,9 @@
 //embedded picture galery start
 document.addEventListener('DOMContentLoaded', function() {
-  const prevBtn = document.getElementById('prevBtn','prevBut');
-  const nextBtn = document.getElementById('nextBtn','nextBut');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
   
-  const pageNumber = document.getElementById('pageNumber');
+  var pageNumber = document.getElementById('pageNumber');
   const gallery = document.querySelector('.gallery');
   const linkForm = document.getElementById('linkForm');
   const imageLink = document.getElementById('imageLink');
