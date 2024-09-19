@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const linkForm = document.getElementById('linkForm');
   const imageLink = document.getElementById('imageLink');
   const password = document.getElementById('password');
-  let currentPage = 1*pageNumber;
+  let currentPage = 1;
     
     // Voeg hier je embedded links toe
   const images = [
