@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const prevBtn = document.getElementById('prevBtn');
   const nextBtn = document.getElementById('nextBtn');
   
-  var pageNumber = document.getElementById('pageNumber');
+  const pageNumber = document.getElementById('pageNumber');
   const gallery = document.querySelector('.gallery');
   const linkForm = document.getElementById('linkForm');
   const imageLink = document.getElementById('imageLink');
