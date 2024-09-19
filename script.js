@@ -2,14 +2,13 @@
 document.addEventListener('DOMContentLoaded', function() {
   const prevBtn = document.getElementById('prevBtn','prevBut');
   const nextBtn = document.getElementById('nextBtn','nextBut');
- 
-  const prevBut = document.getElementById('nextBut');
+  
   const pageNumber = document.getElementById('pageNumber');
   const gallery = document.querySelector('.gallery');
   const linkForm = document.getElementById('linkForm');
   const imageLink = document.getElementById('imageLink');
   const password = document.getElementById('password');
-  let currentPage = 1;
+  let currentPage = 1*pageNumber;
     
     // Voeg hier je embedded links toe
   const images = [
