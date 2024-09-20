@@ -1,4 +1,5 @@
 // Embedded picture gallery start
+// Embedded picture gallery start
 document.addEventListener('DOMContentLoaded', function() {
   const prevBtn = document.getElementById('prevBtn');
   const nextBtn = document.getElementById('nextBtn');
@@ -7,11 +8,11 @@ document.addEventListener('DOMContentLoaded', function() {
   const password = document.getElementById('password');
   const pageNumber = document.getElementById('pageNumber');
   const gallery = document.querySelector('.gallery');
-
   let currentPage = 1;
 
-  // Voeg hier je embedded links toe
-  const images = [
+  // Haal de opgeslagen afbeeldingen op uit localStorage of gebruik de standaard array
+  const storedImages = JSON.parse(localStorage.getItem('images'));
+  const images = storedImages || [
       'https://drive.google.com/thumbnail?id=18ajEqoUA6xd42qWaHAYXYPapU6RUSGcD&sz=w-h.jpg',
       'https://drive.google.com/thumbnail?id=12Y64kDz66CJ5wrCu0w1NkzRHY4LjT7PU&sz=w-h.jpg',
       'https://drive.google.com/thumbnail?id=16gsjSiwZb3dKBtsGdiatS8R94nT2kN94&sz=w-h.jpg',
@@ -66,9 +67,11 @@ document.addEventListener('DOMContentLoaded', function() {
     if (password.value === 'Nattekrentenb0l!') {
       const newLink = imageLink.value;
       images.push(newLink);
+      localStorage.setItem('images', JSON.stringify(images)); // Sla de bijgewerkte array op in localStorage
       updateGallery();
       imageLink.value = '';
       password.value = '';
+      alert('Afbeelding toegevoegd');
     } else {
       alert('Incorrect wachtwoord!');
     }
