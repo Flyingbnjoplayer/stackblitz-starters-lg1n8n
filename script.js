@@ -1,14 +1,16 @@
-//embedded picture galery start
+// Embedded picture gallery start
 document.addEventListener('DOMContentLoaded', function() {
   const prevBtn = document.getElementById('prevBtn');
   const nextBtn = document.getElementById('nextBtn');
-  
+  const linkForm = document.getElementById('linkForm');
+  const imageLink = document.getElementById('imageLink');
+  const password = document.getElementById('password');
   const pageNumber = document.getElementById('pageNumber');
   const gallery = document.querySelector('.gallery');
 
   let currentPage = 1;
-    
-    // Voeg hier je embedded links toe
+
+  // Voeg hier je embedded links toe
   const images = [
       'https://drive.google.com/thumbnail?id=18ajEqoUA6xd42qWaHAYXYPapU6RUSGcD&sz=w-h.jpg',
       'https://drive.google.com/thumbnail?id=12Y64kDz66CJ5wrCu0w1NkzRHY4LjT7PU&sz=w-h.jpg',
@@ -42,25 +44,23 @@ document.addEventListener('DOMContentLoaded', function() {
   const itemsPerPage = 9;
   const totalPages = Math.ceil(images.length / itemsPerPage);
 
-//document.addEventListener('DOMContentLoaded', function() {
+  // Event listener voor de vorige knop
   prevBtn.addEventListener('click', function() {
     if (currentPage > 1) {
       currentPage--;
       updateGallery();
     }
   });
-;
+
+  // Event listener voor de volgende knop
   nextBtn.addEventListener('click', function() {
     if (currentPage < totalPages) {
       currentPage++;
       updateGallery();
     }
   });
-//});
-const linkForm = document.getElementById('linkForm');
-const imageLink = document.getElementById('imageLink');
-const password = document.getElementById('password');
-});
+
+  // Event listener voor het formulier om nieuwe links toe te voegen
   linkForm.addEventListener('submit', function(event) {
     event.preventDefault();
     if (password.value === 'Nattekrentenb0l!') {
@@ -74,6 +74,7 @@ const password = document.getElementById('password');
     }
   });
 
+  // Functie om de galerij bij te werken
   function updateGallery() {
     gallery.innerHTML = '';
     pageNumber.textContent = currentPage;
@@ -96,56 +97,35 @@ const password = document.getElementById('password');
     nextBtn.disabled = currentPage === totalPages;
   }
 
+  // Initialiseer de galerij bij het laden van de pagina
   updateGallery();
-;
+});
 
-
+// Embedded audio container start
 document.addEventListener('DOMContentLoaded', () => {
   const iframes = document.querySelectorAll('iframe');
   let currentIframeIndex = 0;
 
+  // Functie om de juiste iframe te tonen
   const showIframe = (index) => {
     iframes.forEach((iframe, i) => {
       iframe.classList.toggle('active', i === index);
     });
   };
 
-  document.getElementById('prevBtn').addEventListener('click', () => {
+  // Event listener voor de vorige knop
+  document.getElementById('prevBut').addEventListener('click', () => {
     currentIframeIndex = (currentIframeIndex - 1 + iframes.length) % iframes.length;
     showIframe(currentIframeIndex);
   });
 
-  document.getElementById('nextBtn').addEventListener('click', () => {
+  // Event listener voor de volgende knop
+  document.getElementById('nextBut').addEventListener('click', () => {
     currentIframeIndex = (currentIframeIndex + 1) % iframes.length;
     showIframe(currentIframeIndex);
   });
-});
+
+  // Initialiseer de eerste iframe bij het laden van de pagina
   showIframe(currentIframeIndex);
-;
-//embedded picture galery end
-
-//embedded audio container start
-document.addEventListener('DOMContentLoaded', () => {
-    const iframes = document.querySelectorAll('iframe');
-    let currentIframeIndex = 0;
- 
-    const showIframe = (index) => {
-      iframes.forEach((iframe, i) => {
-        iframe.classList.toggle('active', i === index);
-      });
-    };
- 
-    document.getElementById('prevBut').addEventListener('click', () => {
-      currentIframeIndex = (currentIframeIndex - 1 + iframes.length) % iframes.length;
-      showIframe(currentIframeIndex);
-    });
- 
-    document.getElementById('nextBut').addEventListener('click', () => {
-      currentIframeIndex = (currentIframeIndex + 1) % iframes.length;
-      showIframe(currentIframeIndex);
-    });
- 
-    showIframe(currentIframeIndex);
-  });
-
-  //embedded audio container end
+});
+//audio container end
