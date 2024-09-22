@@ -1,5 +1,5 @@
 // Embedded picture gallery start
-document.addEventListener('DOMContentLoaded', function() {
+window.onload = function() {
   const prevBtn = document.getElementById('prevBtn');
   const nextBtn = document.getElementById('nextBtn');
   const linkForm = document.getElementById('linkForm');
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Initialiseer de galerij bij het laden van de pagina
   updateGallery();
-});
+};
 
 // Embedded audio container start
 document.addEventListener('DOMContentLoaded', () => {
