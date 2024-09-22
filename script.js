@@ -1,5 +1,4 @@
 // Embedded picture gallery start
-// Embedded picture gallery start
 document.addEventListener('DOMContentLoaded', function() {
   const prevBtn = document.getElementById('prevBtn');
   const nextBtn = document.getElementById('nextBtn');
@@ -67,7 +66,9 @@ document.addEventListener('DOMContentLoaded', function() {
     if (password.value === 'Nattekrentenb0l!') {
       const newLink = imageLink.value;
       images.push(newLink);
+      console.log('Afbeelding toegevoegd:', newLink);
       localStorage.setItem('images', JSON.stringify(images)); // Sla de bijgewerkte array op in localStorage
+      console.log('Opgeslagen afbeeldingen:', JSON.parse(localStorage.getItem('images')));
       updateGallery();
       imageLink.value = '';
       password.value = '';
