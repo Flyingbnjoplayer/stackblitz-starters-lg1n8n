@@ -63,7 +63,7 @@ window.onload = function() {
   // Event listener voor het formulier om nieuwe links toe te voegen
   linkForm.addEventListener('submit', function(event) {
     event.preventDefault();
-    if (password.value === 'Nattekrentenb0l!') {
+    if (password.value === '1312') {
       const newLink = imageLink.value;
       images.push(newLink);
       console.log('Afbeelding toegevoegd:', newLink);
