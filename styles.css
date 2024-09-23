@@ -41,6 +41,11 @@ nav a:visited[aria-current='page'] {
   background-color: hsl(0, 88%, 45%);
 }
 
+nav a:hover[aria-current='page']{
+  color: purple;
+  background-color: green;
+} 
+
 main {
   padding: 1rem;
 }
@@ -143,21 +148,22 @@ a:link{
   text-decoration: none;
 }
 
+.table1,.table2 a:visited{
+  color:rgb(255, 0, 221);
+  background-color: darkgreen;
+  text-decoration: none;
+}
+
 a:hover{
   color:#0631ec;
   background-color:lightgreen;
   text-decoration: none;
+  cursor: pointer;
 }
 
 a:active{
   color:#2bff00;
   background-color: rgb(100, 0, 87);
-  text-decoration: none;
-}
-
-.table1,.table2 a:visited{
-  color:rgb(255, 0, 221);
-  background-color: darkgreen;
   text-decoration: none;
 }
 
