@@ -202,17 +202,21 @@ button {
   background-color: #007bff;
   color: #fff;
   border: 2px rgb(63, 0, 0);
+  border-style: outset;
   border-radius: 27%;
   cursor: pointer;
 }
 
 button:disabled {
   background-color: #ccc;
+  border-style: outset;
 }
 
 button:hover{
-  background-color: orange;
+  color:purple;
+  background-color: green;
   border: 4px rgb(63, 0, 0);
+  border-style: ridge;
 }
 
 /* Responsive design */
