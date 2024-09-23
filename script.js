@@ -5,6 +5,7 @@ window.onload = function() {
   const linkForm = document.getElementById('linkForm');
   const imageLink = document.getElementById('imageLink');
   const password = document.getElementById('password');
+  const removButn = document.getElementById('removButn');
   const pageNumber = document.getElementById('pageNumber');
   const gallery = document.querySelector('.gallery');
   let currentPage = 1;
@@ -78,6 +79,29 @@ window.onload = function() {
     }
   });
 
+  // Event listener voor de "Verwijderen" knop
+  removButn.addEventListener('click', function(event) {
+    event.preventDefault();
+    if (password.value === '1312') {
+      const linkToRemove = imageLink.value;
+      const index = images.indexOf(linkToRemove);
+      if (index !== -1) {
+        images.splice(index, 1);
+        console.log('Afbeelding verwijderd:', linkToRemove);
+        localStorage.setItem('images', JSON.stringify(images)); // Sla de bijgewerkte array op in localStorage
+        console.log('Opgeslagen afbeeldingen:', JSON.parse(localStorage.getItem('images')));
+        updateGallery();
+        imageLink.value = '';
+        password.value = '';
+        alert('Afbeelding verwijderd');
+      } else {
+        alert('Link niet gevonden!');
+      }
+    } else {
+      alert('Incorrect wachtwoord!');
+    }
+  });
+
   // Functie om de galerij bij te werken
   function updateGallery() {
     gallery.innerHTML = '';
@@ -104,6 +128,7 @@ window.onload = function() {
   // Initialiseer de galerij bij het laden van de pagina
   updateGallery();
 };
+
 
 // Embedded audio container start
 document.addEventListener('DOMContentLoaded', () => {
