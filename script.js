@@ -4,8 +4,6 @@ window.onload = function() {
   const nextBtn = document.getElementById('nextBtn');
   const linkForm = document.getElementById('linkForm');
   const imageLink = document.getElementById('imageLink');
-  const imageLink2 = document.getElementById('imageLink2');
-  const imageLink3 = document.getElementById('imageLink3');
   const password = document.getElementById('password');
   const pageNumber = document.getElementById('pageNumber');
   const gallery = document.querySelector('.gallery');
@@ -66,19 +64,15 @@ window.onload = function() {
   linkForm.addEventListener('submit', function(event) {
     event.preventDefault();
     if (password.value === '1312') {
-      const newLinks = [imageLink.value, imageLink2.value, imageLink3.value].filter(link => link !== '');
-      newLinks.forEach(link => {
-        images.push(link);
-        console.log('Afbeelding toegevoegd:', link);
-      });
+      const newLink = imageLink.value;
+      images.push(newLink);
+      console.log('Afbeelding toegevoegd:', newLink);
       localStorage.setItem('images', JSON.stringify(images)); // Sla de bijgewerkte array op in localStorage
       console.log('Opgeslagen afbeeldingen:', JSON.parse(localStorage.getItem('images')));
       updateGallery();
       imageLink.value = '';
-      imageLink2.value = '';
-      imageLink3.value = '';
       password.value = '';
-      alert('Afbeelding(en) toegevoegd');
+      alert('Afbeelding toegevoegd');
     } else {
       alert('Incorrect wachtwoord!');
     }
@@ -110,7 +104,6 @@ window.onload = function() {
   // Initialiseer de galerij bij het laden van de pagina
   updateGallery();
 };
-
 
 // Embedded audio container start
 document.addEventListener('DOMContentLoaded', () => {
