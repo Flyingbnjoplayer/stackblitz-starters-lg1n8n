@@ -42,8 +42,8 @@ nav a:visited[aria-current='page'] {
 }
 
 nav a:hover[aria-current='page']{
-  color: purple;
-  background-color: green;
+  color: #0631ec;
+  background-color: lightgreen;
 } 
 
 main {
