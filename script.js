@@ -31,7 +31,6 @@ window.onload = function() {
       'https://drive.google.com/thumbnail?id=1h26ox5xEmh5Qel6hqtKPp5h8ju_TTS7k&sz=w-h.jpg',
       'https://drive.google.com/thumbnail?id=1h2yQUS6VK3G8y7K2EysRhZ1JSbgXK6wS&sz=w-h.jpg',
       'https://drive.google.com/thumbnail?id=1h7dWhpVvKt1oDQVoZpejMgzgdn3203k2&sz=w-h.jpg',
-      'https://drive.google.com/thumbnail?id=1h7dWhpVvKt1oDQVoZpejMgzgdn3203k2&sz=w-h.jpg',
       'https://drive.google.com/thumbnail?id=1iFNLlcPd8i9XHAOyzt0hF55ohtn31lXE&sz=w-h.jpg',
       'https://drive.google.com/thumbnail?id=1mGMFBx26wIKn4nUXxlEW51-17TDz_g2o&sz=w-h.jpg',
       'https://drive.google.com/thumbnail?id=1q2ov8cJWWrjKCiJv_zcmuhbaI4tS0Ygt&sz=w-h.jpg',
