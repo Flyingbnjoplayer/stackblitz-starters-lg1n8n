@@ -242,19 +242,19 @@ button:hover{
 #addImageForm {
   display: flex;
   flex-direction: wrap;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 #columnLeft {
   display: flex;
   flex-direction: column;
-  align-self: center;
+  align-self: flex-start;
 }
 
 #columnRight{
   display: flex;
-  flex-wrap: wrap;
-  align-self: center;
+  flex-wrap: column;
+  align-self: flex-end;
 }
 
 #addImageForm input[type="password"],
