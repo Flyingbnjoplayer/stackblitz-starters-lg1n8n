@@ -39,7 +39,7 @@ window.onload = function() {
       'https://drive.google.com/thumbnail?id=1ykthhB-3VFO0_abZvCZBecnyMCPNACxQ&sz=w-h.jpg'
       //'',
       // Voeg meer links toe als je wilt & vergeet niet de komma na de laatste link te verwijderen
-    // Voeg hier meer links toe
+    // Voeg hier meer links toe    
   ];
 
   const itemsPerPage = 9;
@@ -66,14 +66,18 @@ window.onload = function() {
     event.preventDefault();
     if (password.value === '1312') {
       const newLink = imageLink.value;
-      images.push(newLink);
-      console.log('Afbeelding toegevoegd:', newLink);
-      localStorage.setItem('images', JSON.stringify(images)); // Sla de bijgewerkte array op in localStorage
-      console.log('Opgeslagen afbeeldingen:', JSON.parse(localStorage.getItem('images')));
-      updateGallery();
-      imageLink.value = '';
-      password.value = '';
-      alert('Afbeelding toegevoegd');
+      if (images.includes(newLink)) {
+        alert('url reeds toegevoegd');
+      } else {
+        images.push(newLink);
+        console.log('Afbeelding toegevoegd:', newLink);
+        localStorage.setItem('images', JSON.stringify(images)); // Sla de bijgewerkte array op in localStorage
+        console.log('Opgeslagen afbeeldingen:', JSON.parse(localStorage.getItem('images')));
+        updateGallery();
+        imageLink.value = '';
+        password.value = '';
+        alert('Afbeelding toegevoegd');
+      }
     } else {
       alert('Incorrect wachtwoord!');
     }
