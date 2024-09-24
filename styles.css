@@ -240,8 +240,9 @@ button:hover{
 }
 
 #addImageForm {
-  display: inline-flex;
-  justify-content: flex-start;
+  display: flex;
+  flex-direction: wrap;
+  justify-content: flex-end;
 }
 
 #columnLeft {
