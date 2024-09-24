@@ -245,16 +245,18 @@ button:hover{
 #columnLeft {
   display: flex;
   flex-direction: column;
+  align-self: center;
 }
 
 #columnRight{
   display: flex;
   flex-wrap: wrap;
+  align-self: center;
 }
 
 #addImageForm input[type="password"],
 #addImageForm button {
-  align-self: flex-end;
+  align-self: center;
 }
 
 
