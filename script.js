@@ -4,6 +4,8 @@ window.onload = function() {
   const nextBtn = document.getElementById('nextBtn');
   const linkForm = document.getElementById('linkForm');
   const imageLink = document.getElementById('imageLink');
+  const imageLink2 = document.getElementById('imageLink2');
+  const imageLink3 = document.getElementById('imageLink3');
   const password = document.getElementById('password');
   const removButn = document.getElementById('removButn');
   const pageNumber = document.getElementById('pageNumber');
@@ -60,46 +62,62 @@ window.onload = function() {
     }
   });
 
+  // Functie om een nieuwe link toe te voegen
+  function addLink(newLink) {
+    if (newLink && !images.includes(newLink)) {
+      images.push(newLink);
+      console.log('Afbeelding toegevoegd:', newLink);
+      localStorage.setItem('images', JSON.stringify(images)); // Sla de bijgewerkte array op in localStorage
+      console.log('Opgeslagen afbeeldingen:', JSON.parse(localStorage.getItem('images')));
+      updateGallery();
+      alert('Afbeelding toegevoegd');
+    } else if (images.includes(newLink)) {
+      alert('url reeds toegevoegd');
+    }
+  }
+
   // Event listener voor het formulier om nieuwe links toe te voegen
   linkForm.addEventListener('submit', function(event) {
     event.preventDefault();
     if (password.value === '1312') {
-      const newLink = imageLink.value;
-      if (images.includes(newLink)) {
-        alert('url reeds toegevoegd');
-      } else {
-        images.push(newLink);
-        console.log('Afbeelding toegevoegd:', newLink);
-        localStorage.setItem('images', JSON.stringify(images)); // Sla de bijgewerkte array op in localStorage
-        console.log('Opgeslagen afbeeldingen:', JSON.parse(localStorage.getItem('images')));
-        updateGallery();
-        imageLink.value = '';
-        password.value = '';
-        alert('Afbeelding toegevoegd');
-      }
+      addLink(imageLink.value);
+      addLink(imageLink2.value);
+      addLink(imageLink3.value);
+      imageLink.value = '';
+      imageLink2.value = '';
+      imageLink3.value = '';
+      password.value = '';
     } else {
       alert('Incorrect wachtwoord!');
     }
   });
 
+  // Functie om een link te verwijderen
+  function removeLink(linkToRemove) {
+    const index = images.indexOf(linkToRemove);
+    if (index !== -1) {
+      images.splice(index, 1);
+      console.log('Afbeelding verwijderd:', linkToRemove);
+      localStorage.setItem('images', JSON.stringify(images)); // Sla de bijgewerkte array op in localStorage
+      console.log('Opgeslagen afbeeldingen:', JSON.parse(localStorage.getItem('images')));
+      updateGallery();
+      alert('Afbeelding verwijderd');
+    } else {
+      alert('Link niet gevonden!');
+    }
+  }
+
   // Event listener voor de "Verwijderen" knop
   removButn.addEventListener('click', function(event) {
     event.preventDefault();
     if (password.value === '1312') {
-      const linkToRemove = imageLink.value;
-      const index = images.indexOf(linkToRemove);
-      if (index !== -1) {
-        images.splice(index, 1);
-        console.log('Afbeelding verwijderd:', linkToRemove);
-        localStorage.setItem('images', JSON.stringify(images)); // Sla de bijgewerkte array op in localStorage
-        console.log('Opgeslagen afbeeldingen:', JSON.parse(localStorage.getItem('images')));
-        updateGallery();
-        imageLink.value = '';
-        password.value = '';
-        alert('Afbeelding verwijderd');
-      } else {
-        alert('Link niet gevonden!');
-      }
+      removeLink(imageLink.value);
+      removeLink(imageLink2.value);
+      removeLink(imageLink3.value);
+      imageLink.value = '';
+      imageLink2.value = '';
+      imageLink3.value = '';
+      password.value = '';
     } else {
       alert('Incorrect wachtwoord!');
     }
@@ -131,7 +149,6 @@ window.onload = function() {
   // Initialiseer de galerij bij het laden van de pagina
   updateGallery();
 };
-
 
 // Embedded audio container start
 document.addEventListener('DOMContentLoaded', () => {
