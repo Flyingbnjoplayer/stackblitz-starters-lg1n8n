@@ -221,6 +221,11 @@ button:hover{
   margin-bottom: 23px;
 }
 
+button:disabled:hover{
+  cursor: not-allowed;
+  background-color:initial;
+  color:initial;
+}
 /* Responsive design */
 @media (max-width: 600px) {
   .gallery {
