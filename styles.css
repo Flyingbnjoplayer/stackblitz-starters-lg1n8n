@@ -223,9 +223,10 @@ button:hover{
 
 button:disabled:hover{
   cursor: initial;
-  background-color:disabled;
+  background-color:#fff;
   color:disabled;
   border: initial;
+  border-style: outset;
   margin: initial;
 }
 /* Responsive design */
