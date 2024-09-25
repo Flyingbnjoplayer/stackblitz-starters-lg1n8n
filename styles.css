@@ -222,9 +222,10 @@ button:hover{
 }
 
 button:disabled:hover{
-  cursor: not-allowed;
-  background-color:initial;
+  cursor: initial;
+  background-color:disabled;
   color:initial;
+  border: initial;
 }
 /* Responsive design */
 @media (max-width: 600px) {
