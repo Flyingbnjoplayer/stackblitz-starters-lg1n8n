@@ -169,6 +169,7 @@ a:active{
 
 /*afbeeldingen galerij*/
 .gallery-container {
+  flex-direction: row;
   width: 100%;
   margin: auto;
   background-color: #48ff00;
@@ -222,7 +223,7 @@ button:hover{
 }
 
 button:disabled:hover{
-  cursor: initial;
+  cursor: disabled;
   background-color:#fff;
   color:disabled;
   border: initial;
