@@ -1,3 +1,4 @@
+/* Algemene instellingen */
 * {
   box-sizing: border-box;
 }
@@ -9,6 +10,7 @@ body {
   background-color: rgb(17, 180, 71);
 }
 
+/* Navigatie */
 nav {
   display: flex;
   flex-wrap: wrap;
@@ -27,7 +29,7 @@ nav a {
   border-radius: 0.2rem;
   border: solid 3px #000000;
   text-align: center;
-  text-decoration-style: none;
+  text-decoration: none;
   color: #fbff00;
 }
 
@@ -36,50 +38,45 @@ nav a[aria-current='page'] {
   background-color: hsl(0, 88%, 45%);
 }
 
-nav a:visited[aria-current='page'] {
-  color: #fbff00;
-  background-color: hsl(0, 88%, 45%);
-}
-
-nav a:hover[aria-current='page']{
+nav a:hover {
   color: #0631ec;
   background-color: lightgreen;
-} 
+}
 
+/* Hoofdinhoud */
 main {
   padding: 1rem;
 }
 
-/*text styling*/
+/* Tekststijlen */
+h1, h2, h3, p {
+  text-align: center;
+  padding: 0.5rem;
+}
+
 h1 {
   font-weight: bold;
   font-size: 1.5rem;
-  text-align: center;
-  padding: .5rem;
 }
 
-h2{
+h2 {
   font-weight: bold;
   font-size: 1.2rem;
-  text-align: center;
-  padding: .5rem;
 }
 
-h3{
+h3 {
   font-weight: bold;
   font-size: 3rem;
-  text-shadow: 1px, 1px #caff08;
-  text-align: center;
+  text-shadow: 1px 1px #caff08;
 }
 
-p{
+p {
   font-weight: 400;
   font-size: 1rem;
-  text-align: center;
 }
 
 .welcome {
-  font:Georgia;
+  font-family: Georgia;
   font-size: 2rem;
   font-weight: 600;
   text-decoration: overline;
@@ -87,18 +84,7 @@ p{
   color: #0631ec;
 }
 
-#socials, #onchain, #gallery {
-  color:#000000; 
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-style: wavy;
-  text-underline-offset: 6px left;
-  text-shadow: 2px 1px  #FF0000;
-  border-color: #000000;
-}
-
-/*positie en dimensies tabellen*/
+/* Tabellen */
 .table-container {
   display: flex;
   justify-content: space-evenly;
@@ -108,22 +94,18 @@ p{
 
 table {
   border-collapse: collapse;
-  justify-content: center;
   margin: auto;
 }
 
-/*tabeluiterlijk*/
 th, td {
   border: 3px solid black;
-  border-width: 6px;
-  text-align: left;
-  padding: 9px 27px 9px 27px;
-  margin: .1rem;
+  padding: 9px 27px;
+  margin: 0.1rem;
 }
 
 td {
   background-color: #48ff00;
-  font-style: arial;
+  font-family: Arial, sans-serif;
 }
 
 th {
@@ -133,54 +115,53 @@ th {
   background-color: #caff08;
 }
 
-/*tr:nth-child(odd){
-  background-color: red;
+#socials, #onchain, #gallery {
+  color: #000000;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: underline wavy;
+  text-underline-offset: 6px;
+  text-shadow: 2px 1px #FF0000;
 }
 
-tr:nth-child(even){
-  background-color: #48ff00;
-}*/
-
-/*hyperlinks in meerdere toestanden*/
-a:link{
-  color:chartreuse;
+/* Hyperlinks */
+a:link {
+  color: chartreuse;
   background-color: darkgreen;
   text-decoration: none;
 }
 
-.table1,.table2 a:visited{
-  color:rgb(255, 0, 221);
+.table1 a:visited, .table2 a:visited {
+  color: rgb(255, 0, 221);
   background-color: darkgreen;
   text-decoration: none;
 }
 
-a:hover{
-  color:#0631ec;
-  background-color:lightgreen;
-  text-decoration: none;
+a:hover {
+  color: #0631ec;
+  background-color: lightgreen;
   cursor: pointer;
 }
 
-a:active{
-  color:#2bff00;
+a:active {
+  color: #2bff00;
   background-color: rgb(100, 0, 87);
   text-decoration: none;
 }
 
-/*afbeeldingen galerij*/
+/* Afbeeldingengalerij */
 .gallery-container {
   width: 100%;
   margin: auto;
   background-color: #48ff00;
   padding: auto;
-  box-shadow: 2 1 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 1px 10px rgba(0, 0, 0, 0.1);
 }
 
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
-  border: 6px black;
 }
 
 .thumbnail img {
@@ -193,16 +174,14 @@ a:active{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 9px;
-  margin-bottom: 9px;
+  margin: 9px 0;
 }
 
 button {
-  padding: 10px 10px;
+  padding: 10px;
   background-color: #007bff;
   color: #fff;
-  border: 2px rgb(63, 0, 0);
-  border-style: outset;
+  border: 2px solid rgb(63, 0, 0);
   border-radius: 27%;
   cursor: pointer;
   margin-bottom: 27px;
@@ -210,14 +189,12 @@ button {
 
 button:disabled {
   background-color: #ccc;
-  border-style: outset;
 }
 
-button:hover{
-  color:purple;
+button:hover {
+  color: purple;
   background-color: green;
-  border: 4px rgb(63, 0, 0);
-  border-style: ridge;
+  border: 4px ridge rgb(63, 0, 0);
   margin-bottom: 23px;
 }
 
@@ -228,33 +205,11 @@ button:hover{
   }
 }
 
-/* Styling form img gallery */
-.gallery-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.thumbnail {
-  margin: 5px;
-}
-
+/* Formulier voor afbeeldingengalerij */
 #addImageForm {
   display: flex;
-  flex-direction: wrap;
+  flex-wrap: wrap;
   justify-content: center;
-}
-
-#columnLeft {
-  display: flex;
-  flex-direction: column;
-  align-self: flex-start;
-}
-
-#columnRight{
-  display: flex;
-  flex-wrap: column;
-  align-self: flex-end;
 }
 
 #addImageForm input[type="password"],
@@ -262,25 +217,20 @@ button:hover{
   align-self: center;
 }
 
-
 /* End gallery */
 /*mainpage end, page 2 start*/
 
 .tablecontainer-page2 {
   display: flex;
-  flex-wrap: column;
-  justify-content:space-evenly;
-
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 td.table-page2 {
   box-sizing: border-box;
   padding: 6%;
   border-width: 3%;
-  margin-top: .3rem;
-  margin-left: .3rem;
-  margin-bottom: .3rem;
-  margin-right: .3rem;
+  margin: 0.3rem;
 }
 
 .audio-container {
@@ -303,25 +253,22 @@ iframe.active {
   display: block;
 }
 
-.footer{
-  color:#000000;
+/* Footer */
+.footer {
+  color: #000000;
   font-weight: bold;
   font-size: 3rem;
   font-style: italic;
-  text-decoration: underline;
-  text-decoration-style: dashed;
-  text-shadow: 1px, 1px, 0px #caff08;
+  text-decoration: underline dashed;
+  text-shadow: 1px 1px 0px #caff08;
   width: 100%;
   height: 21%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 9px, auto, 9px, auto;
-  margin-top: 0.1rem;
-  margin-bottom: 0;
-  margin-left: 0;
-  margin-right: 0;
+  padding: 9px auto;
+  margin: 0.1rem 0 0 0;
   border-top: solid 9px #caff08;
   background-color: #0631ec;
 }
