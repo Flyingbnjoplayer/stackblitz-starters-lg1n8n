@@ -151,6 +151,7 @@ a:active {
 
 /* Afbeeldingengalerij */
 .gallery-container {
+  flex-direction: row;
   width: 100%;
   margin: auto;
   background-color: #48ff00;
@@ -198,6 +199,14 @@ button:hover {
   margin-bottom: 23px;
 }
 
+button:disabled:hover{
+  cursor: disabled;
+  background-color:#fff;
+  color:disabled;
+  border: initial;
+  border-style: outset;
+  margin: initial;
+}
 /* Responsive design */
 @media (max-width: 600px) {
   .gallery {
