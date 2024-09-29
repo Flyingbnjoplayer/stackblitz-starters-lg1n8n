@@ -222,9 +222,16 @@ button:disabled:hover{
   justify-content: center;
 }
 
+#columnRight, #columnRight{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
 #addImageForm input[type="password"],
 #addImageForm button {
   align-self: center;
+  flex-direction: wrap;
 }
 
 /* End gallery */
