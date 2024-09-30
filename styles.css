@@ -4,10 +4,14 @@
 }
 
 body {
+  border: none;
+  padding: 6% #0631ec;
   margin: 0;
   font-family: system-ui, sans-serif;
   color: black;
   background-color: rgb(17, 180, 71);
+  background-clip: content-box;
+
 }
 
 /* Navigatie */
@@ -222,16 +226,16 @@ button:disabled:hover{
   justify-content: center;
 }
 
-#columnRight, #columnRight{
+#columnLeft, #columnRight{
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: start;
 }
 
 #addImageForm input[type="password"],
 #addImageForm button {
   align-self: center;
-  flex-direction: wrap;
+  flex-direction: column;
 }
 
 /* End gallery */
