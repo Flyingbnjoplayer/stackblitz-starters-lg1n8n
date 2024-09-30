@@ -4,14 +4,14 @@
 }
 
 body {
-  border: none;
-  padding: 6% #0631ec;
+  border: inset #caff08;
+  padding: 0rem 0,3rem orem 0,3rem #0631ec;
   margin: 0;
   font-family: system-ui, sans-serif;
   color: black;
   background-color: rgb(17, 180, 71);
-  background-clip: content-box;
-
+  background-clip: content-box
+   
 }
 
 /* Navigatie */
